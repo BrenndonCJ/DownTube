@@ -1,0 +1,191 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(138, 43, 226);
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 16vh 70vh 10vh;
+    grid-template-areas: "h h h h"
+                        "m m m m"
+                        "f f f f";
+
+    background-color: rgba(0, 0, 0, 0.301);
+    margin: 10px 20px;
+    border-radius: 25px;
+}
+
+
+/* HEADER */
+
+header {
+    grid-area: h;
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "title";
+}
+
+header > div {
+    grid-area: title;
+    text-align: center;
+    align-self: end;
+}
+
+.header-title {
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(240, 248, 255);
+}
+
+#tube {
+    color: rgb(255, 0, 0);
+    font-size: larger;
+}
+
+
+/* MAIN */
+
+main {
+    grid-area: m;
+    
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 20vh 50vh;
+    grid-template-areas: "l l"
+                        "t d";
+}
+
+main #link {
+    grid-area: l;
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+}
+
+main #link input {
+    width: 60vw;
+    height: 4vh;
+    border-radius: 15px;
+}
+
+main #link button {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    color: aliceblue;
+    background-color: rgb(255, 0, 119);
+}
+
+main #link button:hover {
+    background-color:aliceblue;
+    color: rgb(255, 0, 119);
+}
+
+main #thumb {
+    grid-area: t;
+    text-align: center;
+    margin: 25px 25px;
+}
+
+main #thumb > img {
+    width: 280px;
+    height: 180px;
+    border-right: 5px solid yellow;
+    border-bottom: 5px solid yellow;
+    border-radius: 25px;
+}
+
+main #thumb > p {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 25px;
+}
+
+main #download {
+    grid-area: d;
+    margin-top: 80px;
+    margin-left: 25px;
+}
+
+main #download button{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-right: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(0, 195, 255);
+}
+
+main #download button:hover{
+    background-color: rgb(0, 255, 136);
+}
+
+main #download button:active{
+    background-color: rgb(9, 255, 0);
+}
+
+main #download p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+}
+
+
+/* FOOTER */
+
+footer {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    grid-area: f;
+}
+
+
+/* Responsividade */
+@media (max-width: 1000px) {
+    .main-content {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 20vh 20vh 20vh;
+        grid-template-areas: "l"
+                            "t"
+                            "d";
+    }
+
+    main #link {
+        grid-area: l;
+        justify-self: center;
+        align-self: center;
+        text-align: center;
+    }
+
+    main #thumb {
+        grid-area: t;
+        text-align: center;
+        margin: 25px 25px;
+    }
+
+    main #download {
+        grid-area: d;
+        margin-top: 15vh;
+        text-align: center;
+    }
+
+    main #download button{
+        margin: 0px 25vw;
+        margin-bottom: 20px;
+    }
+}

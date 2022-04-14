@@ -1,0 +1,18 @@
+{% extends "downtube.html" %}
+{% block div %}
+    <div>
+        <div>
+            <aside class="thumb">
+                <img src="{{thumbnail}}" alt="">
+                <!-- <img src="https://i.ytimg.com/vi/cCGSBG_0DFY/sddefault.jpg" alt=""> -->
+            </aside>
+        </div>
+        <div id="btdownloads">
+            <aside class="bt-info">
+                <form method="POST" action="{{ url_for('download_video') }}">
+                    <p><button type="submit" name="mp3">MP3</button>info mp3</p>
+                </form>
+            </aside>
+        </div>
+    </div>
+{% endblock %}
