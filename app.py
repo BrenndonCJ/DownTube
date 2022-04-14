@@ -1,5 +1,4 @@
 from flask import Flask, render_template, request, url_for, redirect, send_file, session
-from io import BytesIO
 
 from functions.backend_downtube import *
 
