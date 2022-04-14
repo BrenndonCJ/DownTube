@@ -34,5 +34,4 @@ def download_video():
         
 
 if __name__ == "__main__":
-    # app.run(host= '192.168.2.108', port='5000', debug=True)
-    app.run(host= '192.168.2.108', port='5000', debug=True)
+    app.run(threaded=True, debug=False)
