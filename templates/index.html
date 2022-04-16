@@ -1,19 +1,17 @@
 {% extends "layout.html" %}
 
 {% block convert %}
-    <div id="thumb">
-        <img
-        src="{{thumb_url}}"
-        alt="img">
-        <p><b>{{video_title}}</b></p>
-    </div>
-
-    <div id="download">
-        <form action="{{ url_for('download_video') }}" method="POST">
-            <p>
+        <div id="thumb">
+            <img
+            src="{{thumb_url}}"
+            alt="img">
+            <p><b>{{video_title}}</b></p>
+        </div>
+    
+        <div id="download">
+            <form action="{{ url_for('download_video') }}" method="POST">
                 <button><b>Download</b></button>
-                <b>Baixar áudio MP3 !!!</b>
-            </p>
-        </form>
-    </div>
+            </form>
+        </div>
+    
 {% endblock %}

@@ -1,191 +1,162 @@
-html, body {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: rgb(138, 43, 226);
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    height: 100vh;
+}
+
+.left {
+    background: url('./../images/background.gif') no-repeat;
+    background-position: 60%;
+    background-size: cover;
+    height: 100%;
+    width: 30%;
+}
+
+.left .color {
+    height: 100%;
+    width: 100%;
+    background: rgba(137, 43, 226);
+    opacity: 0.8;
+    z-index: 1;
 }
 
 .container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 16vh 70vh 10vh;
-    grid-template-areas: "h h h h"
-                        "m m m m"
-                        "f f f f";
-
-    background-color: rgba(0, 0, 0, 0.301);
-    margin: 10px 20px;
-    border-radius: 25px;
+    width: 70%;
+    background:rgb(246, 246, 246);
+    padding: 2rem;
 }
 
-
-/* HEADER */
-
-header {
-    grid-area: h;
-
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-areas: "title";
-}
-
-header > div {
-    grid-area: title;
-    text-align: center;
-    align-self: end;
-}
-
-.header-title {
-    font-family: Arial, Helvetica, sans-serif;
-    color: rgb(240, 248, 255);
-}
-
-#tube {
-    color: rgb(255, 0, 0);
-    font-size: larger;
-}
-
-
-/* MAIN */
-
-main {
-    grid-area: m;
-    
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-.main-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 20vh 50vh;
-    grid-template-areas: "l l"
-                        "t d";
-}
-
-main #link {
-    grid-area: l;
-    justify-self: center;
-    align-self: center;
+header div h1.header-title {
+    height: 10%;
     text-align: center;
 }
 
-main #link input {
-    width: 60vw;
-    height: 4vh;
-    border-radius: 15px;
-}
-
-main #link button {
-    font-family: Arial, Helvetica, sans-serif;
-    margin-top: 15px;
-    padding: 10px;
-    border-radius: 10px;
-    border: none;
-    color: aliceblue;
-    background-color: rgb(255, 0, 119);
-}
-
-main #link button:hover {
-    background-color:aliceblue;
+header div h1.header-title span {
+    font-weight: 300;
     color: rgb(255, 0, 119);
 }
 
-main #thumb {
-    grid-area: t;
-    text-align: center;
-    margin: 25px 25px;
+header div h1.header-title span#tube {
+    font-weight: 500;
+    color: rgb(138, 43, 226);
+    font-size: larger;
 }
 
-main #thumb > img {
-    width: 280px;
-    height: 180px;
-    border-right: 5px solid yellow;
-    border-bottom: 5px solid yellow;
-    border-radius: 25px;
+main {
+    height: calc(100% - 10%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
-main #thumb > p {
-    font-family: Arial, Helvetica, sans-serif;
-    margin-top: 25px;
+main div#link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 30%;
 }
 
-main #download {
-    grid-area: d;
-    margin-top: 80px;
-    margin-left: 25px;
+main div#link h2 {
+    font-weight: 200;
+    margin-bottom: 1rem;
 }
 
-main #download button{
-    font-family: Arial, Helvetica, sans-serif;
-    margin-right: 10px;
-    padding: 10px;
-    border-radius: 10px;
+main div#link form {
+    display: flex;
+    width: 100%;
+    height: 40%;
+}
+
+main.main-content div#link form input {
+    width: 20rem;
+    height: 2.5rem;
+    margin-bottom: 1rem;
     border: none;
-    background-color: rgb(0, 195, 255);
+    outline: none;
+    border-radius: 0.5rem 0 0 0.5rem;
+    padding: 0 1rem;
+    font-size: 16px;
 }
 
-main #download button:hover{
-    background-color: rgb(0, 255, 136);
+main div#link form button {
+    padding: 0.5rem;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 0 0.5rem 0.5rem 0;
+    width: 50%;
+    height: 2.5rem;
+    background: rgb(255, 0, 119);
+    color: white;
+    transition: .5s;
 }
 
-main #download button:active{
-    background-color: rgb(9, 255, 0);
+main div#link form button:hover {
+    background: transparent;
+    color: rgb(255, 0, 119);
+    outline: rgb(255, 0, 119) 1px solid;
+    transition: .5s;
 }
 
-main #download p{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: large;
+div#thumb {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1rem;
 }
 
-
-/* FOOTER */
-
-footer {
-    background-color: rgba(0, 0, 0, 0.5);
-    border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px;
-    grid-area: f;
+div#thumb img {
+    width: 60%;
 }
 
+div#thumb p {
+    padding-top: 1rem;
+}
 
-/* Responsividade */
-@media (max-width: 1000px) {
-    .main-content {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 20vh 20vh 20vh;
-        grid-template-areas: "l"
-                            "t"
-                            "d";
-    }
+div#download form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
 
-    main #link {
-        grid-area: l;
-        justify-self: center;
-        align-self: center;
-        text-align: center;
-    }
+div#download form button {
+    cursor: pointer;
+    width: 10rem;
+    height: 50%;
+    background: rgb(138, 43, 226);
+    border: none;
+    outline: none;
+    color: white;
+    border-radius: .5rem;
+    padding: 1rem;
+    transition: 0.5s;
+}
 
-    main #thumb {
-        grid-area: t;
-        text-align: center;
-        margin: 25px 25px;
-    }
+div#download form button:hover {
+    background: transparent;
+    color: rgb(138, 43, 226);
+    outline: rgb(138, 43, 226) 1px solid;
+}
 
-    main #download {
-        grid-area: d;
-        margin-top: 15vh;
-        text-align: center;
-    }
-
-    main #download button{
-        margin: 0px 25vw;
-        margin-bottom: 20px;
-    }
+@media (max-width: 960px) {
+        .left {
+            display: none;
+        }
+        .container {
+            width: 100vw;
+            height: 100vh;
+        }
 }
