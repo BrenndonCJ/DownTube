@@ -32,5 +32,3 @@ python3 app.py
 ```
 
 Um servidor será aberto na porta 5000 da sua máquina, bastando apenas acessar http://localhost:5000.
-
-Ou acesse o site on-line pelo Github Pages: https://seiixas.github.io/netflix-login-clone/.
